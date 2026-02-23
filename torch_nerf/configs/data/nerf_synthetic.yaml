@@ -1,0 +1,8 @@
+dataset_type: nerf_synthetic
+data_root: data/nerf_synthetic  # TODO: Create a file that stores path to raw data files
+scene_name: lego
+data_type: train
+batch_size: 1
+shuffle: true
+half_res: false
+white_bg: true

@@ -1,0 +1,13 @@
+tqdm
+numpy
+beartype
+jaxtyping
+omegaconf
+hydra-core
+Pillow
+imageio[ffmpeg]
+opencv-python
+torchmetrics[image]
+lpips
+tensorboard
+ipykernel
