@@ -56,7 +56,7 @@ We provide a Colab notebook (`NeRF_Inference.ipynb`) for running the entire pipe
 Open the notebook in [Google Colab](https://colab.research.google.com/) and follow the step-by-step instructions. The repository already includes the `lego` dataset and a pre-trained checkpoint (`lego_ckpt.pth`). The notebook will:
 1. Verify GPU availability and install dependencies
 2. Run rendering with the provided checkpoint
-3. Compute evaluation metrics (LPIPS, PSNR, SSIM)
+3. Compute evaluation metrics (LPIPS, PSNR)
 4. Package your submission as a ZIP file
 
 ## Code Structure
@@ -166,12 +166,12 @@ All evaluation steps are automated in the Colab notebook. Simply run the cells i
 
 **Qualitative evaluation**: The notebook renders the trained scene from a 360-degree orbit using the provided checkpoint and optionally compiles the frames into a video.
 
-**Quantitative evaluation**: The notebook renders the scene from 100 **test viewpoints** held out during training, then computes LPIPS, PSNR, and SSIM using `evaluate.py`. The metrics are saved to `evaluation.txt` for use in the submission step.
+**Quantitative evaluation**: The notebook renders the scene from 100 **test viewpoints** held out during training, then computes LPIPS and PSNR using `evaluate.py`. The metrics are saved to `evaluation.txt` for use in the submission step.
 
 The metrics measured using the provided checkpoint on the `lego` scene are summarized in the following table.
-| LPIPS (↓) | PSNR (↑) | SSIM (↑) |
-|---|---|---|
-| 0.0482 | 28.9618 | 0.9525 |
+| LPIPS (↓) | PSNR (↑) |
+|---|---|
+| 0.0482 | 28.9618 |
 
 > :bulb: **For details on grading, refer to section [Evaluation Criteria](#evaluation-criteria).**
 
@@ -193,7 +193,7 @@ The Colab notebook includes a **"Submission"** cell that automatically packages 
 
 - The folder `torch_nerf` that contains every source code file;
 - A folder named `{STUDENT_ID}_renderings` containing the renderings (`.png` files) from the **test views** used for computing evaluation metrics;
-- A text file named `{STUDENT_ID}.txt` containing **a comma-separated list of LPIPS, PSNR, and SSIM** from quantitative evaluation.
+- A text file named `{STUDENT_ID}.txt` containing **a comma-separated list of LPIPS and PSNR** from quantitative evaluation.
 
 You may also assemble the ZIP file manually following the structure above if you prefer.
 
@@ -214,21 +214,18 @@ Before submitting, please double-check that the ZIP file contains all three item
 
 Otherwise, you will receive up to 20 points from this assignment that count toward your final grade.
 
-| Evaluation Criterion | LPIPS (↓, 6 pts) | PSNR (↑, 7 pts) | SSIM (↑, 7 pts) |
-|---|---|---|---|
-| **Success Condition \(100%\)** | **0.06** | **28.00** | **0.90** |
-| **Success Condition \(50%)**   | **0.10**  | **20.00** | **0.60** |
+| Evaluation Criterion | LPIPS (↓, 10 pts) | PSNR (↑, 10 pts) |
+|---|---|---|
+| **Success Condition \(100%\)** | **0.06** | **28.00** |
+| **Success Condition \(50%)**   | **0.10**  | **20.00** |
 
-As shown in the table above, each evaluation metric is assigned up to 6 or 7 points. In particular,
-- **LPIPS (6 points)**
-  - You will receive 6 points if the reported value is equal to or, *smaller* than the success condition \(100%)\;
-  - Otherwise, you will receive 3 points if the reported value is equal to or, *smaller* than the success condition \(50%)\.
-- **PSNR (7 points)**
-  - You will receive 7 points if the reported value is equal to or, *greater* than the success condition \(100%)\;
-  - Otherwise, you will receive 3.5 points if the reported value is equal to or, *greater* than the success condition \(50%)\.
-- **SSIM (7 points)**
-  - You will receive 7 points if the reported value is equal to or, *greater* than the success condition \(100%)\;
-  - Otherwise, you will receive 3.5 points if the reported value is equal to or, *greater* than the success condition \(50%)\.
+As shown in the table above, each evaluation metric is assigned up to 10 points. In particular,
+- **LPIPS (10 points)**
+  - You will receive 10 points if the reported value is equal to or, *smaller* than the success condition \(100%)\;
+  - Otherwise, you will receive 5 points if the reported value is equal to or, *smaller* than the success condition \(50%)\.  
+- **PSNR (10 points)**
+  - You will receive 10 points if the reported value is equal to or, *greater* than the success condition \(100%)\;
+  - Otherwise, you will receive 5 points if the reported value is equal to or, *greater* than the success condition \(50%)\.
 
 ## Further Readings
 

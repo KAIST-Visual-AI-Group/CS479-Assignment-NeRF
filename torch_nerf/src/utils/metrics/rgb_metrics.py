@@ -14,7 +14,6 @@ import torch
 from torchmetrics.image import (
     LearnedPerceptualImagePatchSimilarity,
     PeakSignalNoiseRatio,
-    StructuralSimilarityIndexMeasure,
 )
 
 
@@ -36,14 +35,6 @@ def compute_psnr_between_directories(pred_dir: Path, target_dir: Path) -> float:
     """
     psnr = PeakSignalNoiseRatio(data_range=1.0)
     return compute_metric_between_directories(pred_dir, target_dir, psnr)
-
-@torch.no_grad()
-def compute_ssim_between_directories(pred_dir: Path, target_dir: Path) -> float:
-    """
-    Computes SSIM between the image pairs under two directories.
-    """
-    ssim = StructuralSimilarityIndexMeasure()
-    return compute_metric_between_directories(pred_dir, target_dir, ssim)
 
 @torch.no_grad()
 def compute_metric_between_directories(

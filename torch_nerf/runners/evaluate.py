@@ -13,7 +13,6 @@ from pathlib import Path
 from torch_nerf.src.utils.metrics.rgb_metrics import (
     compute_lpips_between_directories,
     compute_psnr_between_directories,
-    compute_ssim_between_directories,
 )
 
 
@@ -33,15 +32,13 @@ def main():
 
     lpips = compute_lpips_between_directories(dir1, dir2)
     psnr = compute_psnr_between_directories(dir1, dir2)
-    ssim = compute_ssim_between_directories(dir1, dir2)
 
     print(f"LPIPS: {lpips:.4f}")
     print(f"PSNR: {psnr:.4f}")
-    print(f"SSIM: {ssim:.4f}")
 
-    # Save metrics to evaluation.txt (comma-separated: LPIPS, PSNR, SSIM)
+    # Save metrics to evaluation.txt (comma-separated: LPIPS, PSNR)
     with open("evaluation.txt", "w") as f:
-        f.write(f"{lpips:.4f}, {psnr:.4f}, {ssim:.4f}")
+        f.write(f"{lpips:.4f}, {psnr:.4f}")
 
     print("Done.")
 

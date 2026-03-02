@@ -16,7 +16,6 @@ import torch.utils.data as data
 from torchmetrics.image import (
     LearnedPerceptualImagePatchSimilarity,
     PeakSignalNoiseRatio,
-    StructuralSimilarityIndexMeasure,
 )
 from tqdm import tqdm
 
@@ -235,7 +234,6 @@ def validate_one_epoch(
         normalize=True,
     ).to(device)
     psnr = PeakSignalNoiseRatio(data_range=1.0).to(device)
-    ssim = StructuralSimilarityIndexMeasure().to(device)
 
     val_images = []
     metric_dict = {}
@@ -326,13 +324,6 @@ def validate_one_epoch(
             metric_dict["psnr"] = psnr_value
         else:
             metric_dict["psnr"] += psnr_value
-
-        # compute SSIM
-        ssim_value = ssim(pixel_pred, pixel_gt.to(pixel_pred)).item()
-        if "ssim" not in metric_dict:
-            metric_dict["ssim"] = ssim_value
-        else:
-            metric_dict["ssim"] += ssim_value
 
     # compute average over validation samples
     for metric_name in metric_dict:
