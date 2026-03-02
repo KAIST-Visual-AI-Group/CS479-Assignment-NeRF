@@ -20,7 +20,7 @@
   <img src="./media/nerf_blender/lego.gif" width="400" />
 </div>
 
-#### Due: Month Day, 2026 (Someday) 23:59 KST
+#### Due: April 28, 2026 (Tuesday) 23:59 KST
 #### Where to Submit: Gradescope
 
 ## Abstract
@@ -189,11 +189,11 @@ python torch_nerf/runners/train.py
 
 ## What to Submit
 
-The Colab notebook includes a **"Submission"** cell that automatically packages your submission. Run it and enter your name and student ID when prompted. It will generate a ZIP file named `{NAME}_{STUDENT_ID}.zip` containing:
+The Colab notebook includes a **"Submission"** cell that automatically packages your submission. Run it and enter your student ID when prompted. It will generate a ZIP file named `{STUDENT_ID}.zip` containing:
 
 - The folder `torch_nerf` that contains every source code file;
-- A folder named `{NAME}_{STUDENT_ID}_renderings` containing the renderings (`.png` files) from the **test views** used for computing evaluation metrics;
-- A text file named `{NAME}_{STUDENT_ID}.txt` containing **a comma-separated list of LPIPS, PSNR, and SSIM** from quantitative evaluation.
+- A folder named `{STUDENT_ID}_renderings` containing the renderings (`.png` files) from the **test views** used for computing evaluation metrics;
+- A text file named `{STUDENT_ID}.txt` containing **a comma-separated list of LPIPS, PSNR, and SSIM** from quantitative evaluation.
 
 You may also assemble the ZIP file manually following the structure above if you prefer.
 
