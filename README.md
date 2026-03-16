@@ -161,7 +161,7 @@ T_i = \exp \left( - \sum_{j=1}^{i-1} \sigma_j \delta_j \right).
 
 ### Task 3. Qualitative \& Quantitative Evaluation
 
-All evaluation steps are automated in the Colab notebook. Simply run the cells in order.
+All evaluation steps are automated in the provided Jupyter notebook. Simply run the cells in order.
 
 **Qualitative evaluation**: The notebook renders the trained scene from a 360-degree orbit using the provided checkpoint and optionally compiles the frames into a video.
 
@@ -188,7 +188,7 @@ python torch_nerf/runners/train.py
 
 ## What to Submit
 
-The Colab notebook includes a **"Submission"** cell that automatically packages your submission. Run it and enter your student ID when prompted. It will generate a ZIP file named `{STUDENT_ID}.zip` containing:
+The Jupyter notebook includes a **"Submission"** cell that automatically packages your submission. Run it and enter your student ID when prompted. It will generate a ZIP file named `{STUDENT_ID}.zip` containing:
 
 - The folder `torch_nerf` that contains every source code file;
 - A folder named `{STUDENT_ID}_renderings` containing the renderings (`.png` files) from the **test views** used for computing evaluation metrics;
@@ -204,7 +204,7 @@ Before submitting, please double-check that the ZIP file contains all three item
 
 **You will receive a zero score if:**
 - **you do not submit,**
-- **your code is not executable in the provided Colab environment, or**
+- **your code is not executable in the provided KCloud Jupyter environment, or**
 - **you modify any code outside of the section marked with `TODO`.**
   
 **Plagiarism in any form will also result in a zero score and will be reported to the university.**
