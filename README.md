@@ -51,9 +51,9 @@ We strongly recommend you check out the paper, together with [our brief summary]
 
 ## Setup
 
-We provide a Colab notebook (`NeRF_Inference.ipynb`) for running the entire pipeline, from environment setup to rendering, evaluation, and submission packaging.
+We provide a Jupyter notebook (`NeRF_Inference.ipynb`) for running the entire pipeline, from environment setup to rendering, evaluation, and submission packaging.
 
-Open the notebook in [Google Colab](https://colab.research.google.com/) and follow the step-by-step instructions. The repository already includes the `lego` dataset and a pre-trained checkpoint (`lego_ckpt.pth`). The notebook will:
+Open the notebook in Kcloud server and follow the step-by-step instructions. The repository already includes the `lego` dataset and a pre-trained checkpoint (`lego_ckpt.pth`). The notebook will:
 1. Verify GPU availability and install dependencies
 2. Run rendering with the provided checkpoint
 3. Compute evaluation metrics (LPIPS, PSNR)
@@ -107,11 +107,10 @@ torch_nerf
 
 ### Task 0. Environment Setup
 
-Upload this repository to your Google Drive and open `NeRF_Inference.ipynb` in Google Colab. The notebook guides you through the entire workflow.
+Clone this repository to your KCloud server and open `NeRF_Inference.ipynb` in your code editor (we recommend VSCode). The notebook guides you through the entire workflow.
 
-1. **GPU Check**: Verify that a GPU runtime is enabled (`Runtime` → `Change runtime type` → `T4 GPU`).
-2. **Mount Google Drive**: Mount your Drive and navigate to the project directory.
-3. **Install Dependencies**: PyTorch is pre-installed in Colab. Run `pip install -q -r requirements.txt` to install the remaining packages.
+1. **GPU Check**: Verify that a GPU is available.
+2. **Install Dependencies**: Run `pip install -q -r requirements.txt` to install the packages including Pytorch.
 
 
 ### Task 1. Implementing Ray Sampling
