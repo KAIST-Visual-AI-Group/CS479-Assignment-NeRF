@@ -21,7 +21,7 @@
 </div>
 
 #### Due: April 28, 2026 (Tuesday) 23:59 KST
-#### Where to Submit: Gradescope
+#### Where to Submit: KLMS
 
 ## Abstract
 
@@ -197,7 +197,7 @@ The Colab notebook includes a **"Submission"** cell that automatically packages 
 
 You may also assemble the ZIP file manually following the structure above if you prefer.
 
-Before submitting, please double-check that the ZIP file contains all three items listed above. Submit this ZIP file via Gradescope.
+Before submitting, please double-check that the ZIP file contains all three items listed above. Submit this ZIP file via KLMS.
 
 > :bulb: **The checkpoint file is NOT required in the submission.**
 
