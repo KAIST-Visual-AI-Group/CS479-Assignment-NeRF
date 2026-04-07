@@ -137,7 +137,7 @@ The function implements the stratified sampling illustrated in the following equ
 t_i \sim \mathcal{U} \left[ t_n + \frac{i-1}{N} \left( t_f - t_n \right), t_n + \frac{i}{N} \left( t_f - t_n \right) \right].
 ```
 
-> :bulb: Check out the helper functions [`create_t_bins`](https://github.com/KAIST-Visual-AI-Group/CS479-Assignment-NeRF/blob/main/torch_nerf/src/renderer/ray_samplers/stratified_sampler.py#L110) and [`map_t_to_euclidean`](https://github.com/KAIST-Visual-AI-Group/CS479-Assignment-NeRF/blob/main/torch_nerf/src/renderer/ray_samplers/stratified_sampler.py#L97) while implementing function `sample_along_rays_uniform`. Also, you may find [`torch.rand_like`](https://pytorch.org/docs/stable/generated/torch.rand_like.html) useful when generating random numbers for sampling.
+> :bulb: Check out the helper functions [`create_t_bins`](https://github.com/KAIST-Visual-AI-Group/CS479-Assignment-NeRF/blob/main/torch_nerf/src/renderer/ray_samplers/stratified_sampler.py#L116) and [`map_t_to_euclidean`](https://github.com/KAIST-Visual-AI-Group/CS479-Assignment-NeRF/blob/main/torch_nerf/src/renderer/ray_samplers/stratified_sampler.py#L104) while implementing function `sample_along_rays_uniform`. Also, you may find [`torch.rand_like`](https://pytorch.org/docs/stable/generated/torch.rand_like.html) useful when generating random numbers for sampling.
 
 ### Task 2. Implementing Volume Rendering Equation
 ```bash
